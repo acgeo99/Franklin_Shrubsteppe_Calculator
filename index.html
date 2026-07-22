@@ -519,12 +519,12 @@
         <div class="field">
           <label>Restoration Activity</label>
           <select id="mit-activity" onchange="calculate()">
-            <option value="reestablish" selected>Reestablishment (2:1)</option>
-            <option value="restore">Restoration (3:1)</option>
-            <option value="pe">Preservation w/ enhancement (4:1)</option>
-            <option value="preserve">Preservation only (6:1)</option>
+            <option value="reestablish" selected>Reestablishment (1:1)</option>
+            <option value="restore">Restoration (1.5:1)</option>
+            <option value="pe">Preservation w/ enhancement (2:1)</option>
+            <option value="preserve">Preservation only (3:1)</option>
           </select>
-          <div class="factor-display" id="mit-activity-display">Activity factor: 2 (÷2 per acre)</div>
+          <div class="factor-display" id="mit-activity-display">Activity factor: 1 (÷1 per acre)</div>
         </div>
 
         <div class="formula-box" id="credit-formula">
@@ -610,10 +610,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>Reestablish</td><td>2.00</td><td>1.50</td><td>1.00</td><td>0.50</td></tr>
-            <tr><td>Restore</td><td>1.33</td><td>1.00</td><td>0.67</td><td>0.33</td></tr>
-            <tr><td>Preserve &amp; Enhance</td><td>1.00</td><td>0.75</td><td>0.50</td><td>0.25</td></tr>
-            <tr><td>Preserve Only</td><td>0.67</td><td>0.50</td><td>0.33</td><td>0.17</td></tr>
+            <tr><td>Reestablish</td><td>4.00</td><td>3.00</td><td>2.00</td><td>1.00</td></tr>
+            <tr><td>Restore</td><td>2.67</td><td>2.00</td><td>1.33</td><td>0.67</td></tr>
+            <tr><td>Preserve &amp; Enhance</td><td>2.00</td><td>1.50</td><td>1.00</td><td>0.50</td></tr>
+            <tr><td>Preserve Only</td><td>1.33</td><td>1.00</td><td>0.67</td><td>0.33</td></tr>
           </tbody>
         </table>
         <p class="matrix-caption">Mitigation credit matrix (per acre)</p>
@@ -626,8 +626,8 @@
 <script>
 const SPATIAL = { core: 4, goa: 3, corridor: 2, other: 1 };
 const QUALITY = { high: 1.0, good: 0.75, moderate: 0.5, poor: 0.375 };
-const ACTIVITY = { reestablish: 2, restore: 3, pe: 4, preserve: 6 };
-const ACTIVITY_LABEL = { reestablish: '2:1 ratio', restore: '3:1 ratio', pe: '4:1 ratio', preserve: '6:1 ratio' };
+const ACTIVITY = { reestablish: 1, restore: 1.5, pe: 2, preserve: 3 };
+const ACTIVITY_LABEL = { reestablish: '1:1 ratio', restore: '1.5:1 ratio', pe: '2:1 ratio', preserve: '3:1 ratio' };
 const SPATIAL_LABELS = { core: 'Core', goa: 'GOA', corridor: 'Corridor', other: 'Other' };
 const QUALITY_LABELS = { high: 'High', good: 'Good', moderate: 'Moderate', poor: 'Poor' };
 const ACTIVITY_LABELS = { reestablish: 'Reestablish', restore: 'Restore', pe: 'Preserve & Enhance', preserve: 'Preserve Only' };
