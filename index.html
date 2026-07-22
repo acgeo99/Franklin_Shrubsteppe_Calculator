@@ -764,7 +764,7 @@ calculate();
       "properties": { "name": "Franklin County" },
       "geometry": { "type": "Polygon", "coordinates": [[[-119.081621,46.738019],[-118.209807,46.738938],[-118.249122,46.734138],[-118.21566,46.588924],[-118.224468,46.591022],[-118.228928,46.593606],[-118.452637,46.596973],[-118.615592,46.504543],[-118.633826,46.414022],[-118.746199,46.359512],[-118.777228,46.290177],[-118.972827,46.238705],[-119.041418,46.192856],[-119.268928,46.277957],[-119.258292,46.489457],[-119.45322,46.679243],[-119.368939,46.678204],[-119.369387,46.737696],[-119.081621,46.738019]]] }
     };
-    L.geoJSON(franklinCounty, {
+    var franklinCountyLayer = L.geoJSON(franklinCounty, {
       style: {
         color: '#1a1a1a',
         weight: 2.5,
@@ -893,6 +893,7 @@ calculate();
               };
             }
           }).addTo(map);
+            if (typeof franklinCountyLayer !== "undefined") { franklinCountyLayer.bringToFront(); }
         })
         .catch(e => console.error('Failed to load priority data:', e));
     }
