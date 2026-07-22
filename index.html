@@ -409,7 +409,16 @@
     margin: 7px 0;
   }
 
-</style>
+
+    .city-label {
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 600;
+      text-shadow: 0 0 3px #000, 0 0 3px #000, 0 1px 2px #000;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+  </style>
   <!-- Leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -766,6 +775,34 @@ calculate();
       interactive: false
     }).addTo(map);
 
+    // ── City / town reference points ─────────────────────────
+    const franklinCities = [
+      { name: 'Pasco',      lat: 46.2396, lng: -119.1006 },
+      { name: 'Connell',    lat: 46.6635, lng: -118.8608 },
+      { name: 'Mesa',       lat: 46.5787, lng: -119.0022 },
+      { name: 'Kahlotus',   lat: 46.6446, lng: -118.5533 },
+      { name: 'Basin City', lat: 46.5901, lng: -119.1595 }
+    ];
+    franklinCities.forEach(c => {
+      L.circleMarker([c.lat, c.lng], {
+        radius: 4,
+        color: '#ffffff',
+        weight: 1.5,
+        fillColor: '#1f4e79',
+        fillOpacity: 1,
+        interactive: false
+      }).addTo(map);
+      L.marker([c.lat, c.lng], {
+        interactive: false,
+        icon: L.divIcon({
+          className: 'city-label',
+          html: c.name,
+          iconSize: [80, 16],
+          iconAnchor: [-6, 8]
+        })
+      }).addTo(map);
+    });
+
     L.tileLayer(
       'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',
       { attribution: '', maxZoom: 18, opacity: 0.9 }
@@ -795,7 +832,10 @@ calculate();
         '<div class="legend-divider"></div>' +
         '<div class="legend-title">Pins</div>' +
         '<div class="legend-item"><span class="legend-pin" style="background:#c4522a"></span>Impact</div>' +
-        '<div class="legend-item"><span class="legend-pin" style="background:#08BFDD"></span>Mitigation</div>';
+        '<div class="legend-item"><span class="legend-pin" style="background:#08BFDD"></span>Mitigation</div>' +
+        '<div class="legend-divider"></div>' +
+        '<div class="legend-title">Reference</div>' +
+        '<div class="legend-item"><span class="legend-pin" style="background:#1f4e79"></span>City / town</div>';
       return div;
     };
     legend.addTo(map);
