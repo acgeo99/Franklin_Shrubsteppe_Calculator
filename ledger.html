@@ -62,7 +62,7 @@ header a:hover { opacity: 1; }
 
 .main { max-width: 1300px; margin: 0 auto; padding: 28px 24px 60px; }
 
-/* ââ Entry Form âââââââââââââââââââââââââââââââââââââââââââ */
+/* ── Entry Form ─────────────────────────────────────────── */
 .entry-panel {
   background: var(--white);
   border: 1px solid var(--border);
@@ -151,7 +151,7 @@ select:focus, input:focus { border-color: var(--sage); }
 }
 .add-btn:hover { background: #1a3540; }
 
-/* ââ Two-column ledger layout âââââââââââââââââââââââââââââ */
+/* ── Two-column ledger layout ───────────────────────────── */
 .ledger-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -280,7 +280,7 @@ select:focus, input:focus { border-color: var(--sage); }
 }
 .add-credit-btn:hover { background: #0f3025; }
 
-/* ââ Balance Summary ââââââââââââââââââââââââââââââââââââââ */
+/* ── Balance Summary ────────────────────────────────────── */
 .balance-panel {
   background: var(--white);
   border: 1px solid var(--border);
@@ -315,7 +315,7 @@ select:focus, input:focus { border-color: var(--sage); }
 .balance-negative { color: var(--red) !important; }
 .b-sub { font-size: 11px; color: var(--text-muted); margin-top: 4px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
-/* ââ Reference Matrices âââââââââââââââââââââââââââââââââââ */
+/* ── Reference Matrices ─────────────────────────────────── */
 .matrix-wrap { margin-top: 0; }
 .matrix-wrap h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 .matrices { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -361,7 +361,7 @@ select:focus, input:focus { border-color: var(--sage); }
   <div>
     <h1>Shrubsteppe Mitigation Ledger</h1>
     <p>Project-level impact &amp; credit accounting</p>
-    <p style="font-size:11px;opacity:0.5;margin-top:6px;font-style:italic;">For demonstration and planning purposes only â not for official use</p>
+    <p style="font-size:11px;opacity:0.5;margin-top:6px;font-style:italic;">For demonstration and planning purposes only — not for official use</p>
   </div>
   <div style="display:flex;gap:10px">
     <a href="index.html">&larr; Calculator</a>
@@ -393,7 +393,7 @@ select:focus, input:focus { border-color: var(--sage); }
         <div class="field">
           <label>Jurisdiction</label>
           <select id="entry-jurisdiction">
-            <option value="">â Select â</option>
+            <option value="">— Select —</option>
             <option value="Richland">Richland</option>
             <option value="Kennewick">Kennewick</option>
             <option value="West Richland">West Richland</option>
@@ -406,10 +406,10 @@ select:focus, input:focus { border-color: var(--sage); }
         <div class="field">
           <label>Spatial Priority</label>
           <select id="entry-priority">
-            <option value="core">Core (Ã4)</option>
-            <option value="goa">GOA (Ã3)</option>
-            <option value="corridor" selected>Corridor (Ã2)</option>
-            <option value="other">Other (Ã1)</option>
+            <option value="core">Core (×4)</option>
+            <option value="goa">GOA (×3)</option>
+            <option value="corridor" selected>Corridor (×2)</option>
+            <option value="other">Other (×1)</option>
           </select>
           <div class="explainer">Enter the WSRRI/PHS Spatial Priority class for the impact location. Use the map on the Calculator page to determine the appropriate class.</div>
         </div>
@@ -417,10 +417,10 @@ select:focus, input:focus { border-color: var(--sage); }
         <div class="field">
           <label>Habitat Quality</label>
           <select id="entry-quality">
-            <option value="high">High (Ã1.0)</option>
-            <option value="good" selected>Good (Ã0.75)</option>
-            <option value="moderate">Moderate (Ã0.5)</option>
-            <option value="poor">Poor (Ã0.375)</option>
+            <option value="high">High (×1.0)</option>
+            <option value="good" selected>Good (×0.75)</option>
+            <option value="moderate">Moderate (×0.5)</option>
+            <option value="poor">Poor (×0.375)</option>
           </select>
           <div class="explainer">Enter the shrubsteppe habitat quality rating for the impact site based on field assessment or PHS records.</div>
         </div>
@@ -461,9 +461,9 @@ select:focus, input:focus { border-color: var(--sage); }
           <tfoot>
             <tr class="total-row" id="impact-total-row" style="display:none">
               <td colspan="2">TOTAL</td>
-              <td id="total-impact-acres">â</td>
+              <td id="total-impact-acres">—</td>
               <td colspan="2"></td>
-              <td id="total-debits" class="debit-val">â</td>
+              <td id="total-debits" class="debit-val">—</td>
               <td></td>
             </tr>
           </tfoot>
@@ -489,10 +489,10 @@ select:focus, input:focus { border-color: var(--sage); }
         <div>
           <label>Spatial Priority</label>
           <select id="credit-priority">
-            <option value="core">Core (Ã4)</option>
-            <option value="goa" selected>GOA (Ã3)</option>
-            <option value="corridor">Corridor (Ã2)</option>
-            <option value="other">Other (Ã1)</option>
+            <option value="core">Core (×4)</option>
+            <option value="goa" selected>GOA (×3)</option>
+            <option value="corridor">Corridor (×2)</option>
+            <option value="other">Other (×1)</option>
           </select>
         </div>
         <div>
@@ -526,9 +526,9 @@ select:focus, input:focus { border-color: var(--sage); }
           <tfoot>
             <tr class="total-row" id="credit-total-row" style="display:none">
               <td>TOTAL</td>
-              <td id="total-credit-acres">â</td>
+              <td id="total-credit-acres">—</td>
               <td colspan="2"></td>
-              <td id="total-credits" class="credit-val">â</td>
+              <td id="total-credits" class="credit-val">—</td>
               <td></td>
             </tr>
           </tfoot>
@@ -543,32 +543,32 @@ select:focus, input:focus { border-color: var(--sage); }
     <div class="balance-header">
       <h2>Mitigation Balance Summary</h2>
       <div style="display:flex;align-items:center;gap:12px">
-        <span class="balance-status" id="balance-status">â</span>
+        <span class="balance-status" id="balance-status">—</span>
         <button class="export-btn" onclick="exportCSV()">&#8659; Export CSV</button>
       </div>
     </div>
     <div class="balance-grid">
       <div class="balance-cell">
         <div class="b-label">Total Debits</div>
-        <div class="b-value debit" id="bal-debits">â</div>
+        <div class="b-value debit" id="bal-debits">—</div>
         <div class="b-sub">impact acre-equivalents</div>
       </div>
       <div class="balance-divider"></div>
       <div class="balance-cell">
         <div class="b-label">Total Credits</div>
-        <div class="b-value credit" id="bal-credits">â</div>
+        <div class="b-value credit" id="bal-credits">—</div>
         <div class="b-sub">mitigation acre-equivalents</div>
       </div>
       <div class="balance-divider"></div>
       <div class="balance-cell">
         <div class="b-label">Net Balance</div>
-        <div class="b-value balance" id="bal-balance">â</div>
-        <div class="b-sub" id="bal-balance-sub">â</div>
+        <div class="b-value balance" id="bal-balance">—</div>
+        <div class="b-sub" id="bal-balance-sub">—</div>
       </div>
       <div class="balance-divider"></div>
       <div class="balance-cell">
         <div class="b-label">Realized Ratio</div>
-        <div class="b-value" id="bal-realized" style="color:var(--text-muted)">â</div>
+        <div class="b-value" id="bal-realized" style="color:var(--text-muted)">—</div>
         <div class="b-sub" id="bal-realized-sub">credits applied toward offset</div>
       </div>
     </div>
@@ -576,7 +576,7 @@ select:focus, input:focus { border-color: var(--sage); }
 
   <!-- REFERENCE MATRICES -->
   <div class="matrix-wrap">
-    <h3>Reference â Lookup Matrices</h3>
+    <h3>Reference — Lookup Matrices</h3>
     <div class="matrices">
       <div>
         <table class="matrix-table">
@@ -659,7 +659,7 @@ function renderImpacts() {
     totalDebits += r.debits;
     return `<tr>
       <td>${r.id}</td>
-      <td>${r.jurisdiction || 'â'}</td>
+      <td>${r.jurisdiction || '—'}</td>
       <td>${fmt(r.acres)}</td>
       <td>${SPATIAL_LABEL[r.priority]}</td>
       <td>${QUALITY_LABEL[r.quality]}</td>
@@ -724,12 +724,12 @@ function updateBalance() {
 
   if (impacts.length === 0 && credits.length === 0) {
     ['bal-debits','bal-credits','bal-balance','bal-realized'].forEach(id => {
-      document.getElementById(id).textContent = 'â';
+      document.getElementById(id).textContent = '—';
     });
     document.getElementById('bal-balance').className = 'b-value balance';
     document.getElementById('bal-realized').style.color = 'var(--text-muted)';
-    document.getElementById('balance-status').textContent = 'â';
-    document.getElementById('bal-balance-sub').textContent = 'â';
+    document.getElementById('balance-status').textContent = '—';
+    document.getElementById('bal-balance-sub').textContent = '—';
     document.getElementById('bal-realized-sub').textContent = 'credits applied toward offset';
     return;
   }
@@ -741,9 +741,9 @@ function updateBalance() {
   balEl.textContent = (balance >= 0 ? '+' : '') + fmt(balance);
   balEl.className = 'b-value balance ' + (balance >= 0 ? 'balance-positive' : 'balance-negative');
   document.getElementById('bal-balance-sub').textContent = 'Balance: ' + (balance >= 0 ? '+' : '') + fmt(balance);
-  document.getElementById('balance-status').textContent = totalDebits > 0 ? (balance >= 0 ? 'SURPLUS' : 'DEFICIT') : 'â';
+  document.getElementById('balance-status').textContent = totalDebits > 0 ? (balance >= 0 ? 'SURPLUS' : 'DEFICIT') : '—';
 
-  // Realized ratio â based on credits vs debits directly
+  // Realized ratio — based on credits vs debits directly
   const rrEl = document.getElementById('bal-realized');
   if (totalDebits > 0) {
     const realized = Math.min(totalCredits, totalDebits) / totalDebits;
@@ -752,7 +752,7 @@ function updateBalance() {
     document.getElementById('bal-realized-sub').textContent =
       realized >= 1 ? 'offset requirement met' : fmt(realized * 100) + '% of offset reached';
   } else {
-    rrEl.textContent = 'â';
+    rrEl.textContent = '—';
     rrEl.style.color = 'var(--text-muted)';
     document.getElementById('bal-realized-sub').textContent = 'credits applied toward offset';
   }
