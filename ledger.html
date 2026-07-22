@@ -394,12 +394,12 @@ select:focus, input:focus { border-color: var(--sage); }
           <label>Jurisdiction</label>
           <select id="entry-jurisdiction">
             <option value="">— Select —</option>
-            <option value="Richland">Richland</option>
-            <option value="Kennewick">Kennewick</option>
-            <option value="West Richland">West Richland</option>
-            <option value="Prosser">Prosser</option>
-            <option value="Benton City">Benton City</option>
-            <option value="Unincorporated Benton County">Unincorporated Benton County</option>
+            <option value="Connell UGA">Connell UGA</option>
+            <option value="Pasco UGA">Pasco UGA</option>
+            <option value="Kahlotus UGA">Kahlotus UGA</option>
+            <option value="Mesa UGA">Mesa UGA</option>
+            
+            <option value="Unincorporated Franklin County">Unincorporated Franklin County</option>
           </select>
         </div>
 
@@ -498,10 +498,10 @@ select:focus, input:focus { border-color: var(--sage); }
         <div>
           <label>Activity</label>
           <select id="credit-activity">
-            <option value="reestablish" selected>Reestablishment (2:1)</option>
-            <option value="restore">Restoration (3:1)</option>
-            <option value="pe">Preservation w/ enhancement (4:1)</option>
-            <option value="preserve">Preservation only (6:1)</option>
+            <option value="reestablish" selected>Reestablishment (1:1)</option>
+            <option value="restore">Restoration (1.5:1)</option>
+            <option value="pe">Preservation w/ enhancement (2:1)</option>
+            <option value="preserve">Preservation only (3:1)</option>
           </select>
         </div>
         <div>
@@ -598,10 +598,10 @@ select:focus, input:focus { border-color: var(--sage); }
             <tr><th>Activity / Priority</th><th>Core</th><th>GOA</th><th>Corridor</th><th>Other</th></tr>
           </thead>
           <tbody>
-            <tr><td>Reestablish</td><td>2.00</td><td>1.50</td><td>1.00</td><td>0.50</td></tr>
-            <tr><td>Restore</td><td>1.33</td><td>1.00</td><td>0.67</td><td>0.33</td></tr>
-            <tr><td>Preserve &amp; Enhance</td><td>1.00</td><td>0.75</td><td>0.50</td><td>0.25</td></tr>
-            <tr><td>Preserve Only</td><td>0.67</td><td>0.50</td><td>0.33</td><td>0.17</td></tr>
+            <tr><td>Reestablish</td><td>4.00</td><td>3.00</td><td>2.00</td><td>1.00</td></tr>
+            <tr><td>Restore</td><td>2.67</td><td>2.00</td><td>1.33</td><td>0.67</td></tr>
+            <tr><td>Preserve &amp; Enhance</td><td>2.00</td><td>1.50</td><td>1.00</td><td>0.50</td></tr>
+            <tr><td>Preserve Only</td><td>1.33</td><td>1.00</td><td>0.67</td><td>0.33</td></tr>
           </tbody>
         </table>
         <p class="matrix-caption">Mitigation credit matrix (per acre)</p>
@@ -614,7 +614,7 @@ select:focus, input:focus { border-color: var(--sage); }
 <script>
 const SPATIAL = { core: 4, goa: 3, corridor: 2, other: 1 };
 const QUALITY = { high: 1.0, good: 0.75, moderate: 0.5, poor: 0.375 };
-const ACTIVITY = { reestablish: 2, restore: 3, pe: 4, preserve: 6 };
+const ACTIVITY = { reestablish: 1, restore: 1.5, pe: 2, preserve: 3 };
 const SPATIAL_LABEL = { core: 'Core', goa: 'GOA', corridor: 'Corridor', other: 'Other' };
 const QUALITY_LABEL = { high: 'High', good: 'Good', moderate: 'Moderate', poor: 'Poor' };
 const ACTIVITY_LABEL = { reestablish: 'Reestablish', restore: 'Restore', pe: 'Preserve & Enhance', preserve: 'Preserve Only' };
