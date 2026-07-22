@@ -893,7 +893,7 @@ calculate();
               };
             }
           }).addTo(map);
-            if (typeof franklinCountyLayer !== "undefined") { franklinCountyLayer.bringToFront(); }
+            if (typeof franklinCountyLayer !== "undefined") { setTimeout(function(){ franklinCountyLayer.bringToFront(); }, 0); }
         })
         .catch(e => console.error('Failed to load priority data:', e));
     }
